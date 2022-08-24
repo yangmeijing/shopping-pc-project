@@ -1,10 +1,18 @@
 <template>
-    <nav>顶部通栏</nav>
-    <header>头部组件</header>
-    <div>
+    <AppNavbar />
+    <AppHeader />
+    <main class="app-body">
         <RouterView />
-    </div>
-    <footer>底部组件</footer>
+    </main>
+    <AppFooter />
 </template>
 <script setup>
+import AppNavbar from '@/components/app-navbar.vue'
+import AppHeader from '@/components/app-header.vue'
+import AppFooter from '@/components/app-footer.vue'
 </script>
+<style>
+.app-body{
+    min-height: 600px;
+}
+</style>
